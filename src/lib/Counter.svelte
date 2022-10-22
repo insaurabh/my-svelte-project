@@ -1,4 +1,7 @@
+
 <script lang="ts">
+  import Numbers from './Numbers.svelte';
+
   let count: number = 0
   $: doubled = count *2
 
@@ -12,3 +15,5 @@
 </button>
 
 <p> {count} doubled is {doubled} </p>
+
+<Numbers />
