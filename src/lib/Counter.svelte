@@ -16,4 +16,6 @@
 
 <p> {count} doubled is {doubled} </p>
 
-<Numbers />
+<Numbers/>
+
+<Numbers marks={[count]}/>

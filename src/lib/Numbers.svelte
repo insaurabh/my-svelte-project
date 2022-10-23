@@ -1,15 +1,20 @@
 <script lang="ts">
 
-   let numbers = [1,2,3];
+  export let marks: number[] = [1,2,3];
 
-   const addNumber =  () => {
-    numbers = [...numbers, numbers.length + 1];
+  const addNumber =  () => {
+    marks = [...marks, marks.length + 1];
    } 
-   $: sum = numbers.reduce((t,n) => t + n, 0)
+
+   $: sum = marks.reduce((t,n) => t + n, 0)
 </script>
 
-<p>{numbers.join(' + ')} =  {sum}</p>
+<p>{marks.join(' + ')} =  {sum}</p>
 
 <button on:click={addNumber}>
     Add a number
 </button>
+
+{#if sum === 5} 
+ { alert(sum) }
+{/if}

@@ -1,6 +1,15 @@
 <script lang="ts">
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
+  import Things from './lib/Things.svelte';
+
+
+  let things = [
+    { id: 1, name: 'apple'},
+    { id: 2, name: 'mango'},
+    { id: 3, name: 'carrot'}
+  ];
+
 </script>
 
 <main>
@@ -25,6 +34,11 @@
   <p class="read-the-docs">
     Click on the Vite and Svelte logos to learn more
   </p>
+
+  {#each things as thing ( thing.id)}
+    <Things name={thing.name}/>
+
+  {/each}
 </main>
 
 <style>
